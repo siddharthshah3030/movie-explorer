@@ -1,2 +1,4 @@
 # movie-explorer
-search ovies on the go on the IMDB database
+search Movies on the go on the IMDB database
+contribute by adding more features
+:P
