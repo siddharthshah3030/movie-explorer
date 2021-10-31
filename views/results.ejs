@@ -1,47 +1,49 @@
 <html>
-  
+
 <head>
   <title> movies title</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
 
-<body> 
-<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-  </button>
-  <div class="" id="navbarTogglerDemo01">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <a class="navbar-brand inline large " href="/">Movies database</a>
+<body>
+  <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+    </button>
+    <div class="" id="navbarTogglerDemo01">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <a class="navbar-brand inline large " href="/">Movies database</a>
 
-    
-    
-    <form class="formishere form-inline my-6 my-lg-6 align-right " action="/results" method="GET">
-      <input class="form-control mr-sm-2" name="search" type="search" placeholder="keywords.." aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-    </ul>
-  </div>
-</nav>
 
-<div class="container"> 
-<div class="row">
 
-            <% data["Search"].forEach(function(movie) { %>
+        <form class="formishere form-inline my-6 my-lg-6 align-right " action="/results" method="GET">
+          <input class="form-control mr-sm-2" name="search" type="search" placeholder="keywords.." aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+
+      <% data["Search"].forEach(function(movie) { %>
         <div class="col col-lg-3 col-sm-6 p-auto m-auto ">
-               <div class="text-center">
-            <img  src="<%= movie["Poster"] %>" class="rounded img-thumbnail" alt="poster here">
-                </div>
-            <div>
-                        <strong>
-                        <%= movie["Title"] %>
-                    </strong> 
-                    - <%=movie["Year"]%>
-            </div>
-      
-        </div>
-                <% }) %>
+          <div class="text-center">
+            <img src="<%= movie[" Poster"] %>" class="rounded img-thumbnail" alt="poster here">
+          </div>
+          <div>
+            <strong>
+              <%= movie["Title"] %>
+            </strong>
+            - <%=movie["Year"]%>
+          </div>
 
-      </div>
-</div>
+        </div>
+        <% }) %>
+
+    </div>
+  </div>
 </body>
+
 </html>
